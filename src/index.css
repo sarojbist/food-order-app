@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.paddings {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+/* Header part */
+.header {
+  display: flex;
+  background-color: rgb(145, 207, 207);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.nav-items > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style-type: none;
+  font-weight: 600;
+}
+/* for tab */
+@media (max-width: 900px) { 
+  .nav-items ul {
+    gap: 20px;
+  }
+}
+/* for mobiles */
+@media (max-width: 576px) {
+  .nav-items > ul {
+    gap: 10px;
+    font-size: 16px;
+  }
+  .head-logo > img {
+    width: 90px;
+  }
+}
+/* Header part ends here */
+/* ****************************************************************** */
+.resturant-cards {
+margin-top: 40px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 20px;
+}
+.resturant-name {
+  font-size: 20px;
+}
+.resturant-card {
+  width: 250px;
+  padding: 5px;
+  transition: transform 0.3s ease;
+  /* border: 1px solid black; */
+  cursor: pointer;
+  margin-bottom: 10px;
+
+}
+.resturant-card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.resturant-card img {
+  width: 240px;
+  height: 160px;
+  object-fit: cover;
+ border-radius: 5%;
+}
+.resturant-info {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 0px;
+}
+.resturant-type {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(98, 88, 88);
+}
+@media (max-width: 900px) { 
+  .paddings {
+    padding: 0px;
+  }
+ .resturant-cards {
+  justify-items: center;
+ }
+ .resturant-card {
+  margin: auto;
+ }
+}
