@@ -93,3 +93,18 @@ gap: 20px;
   margin: auto;
  }
 }
+
+/*  */
+.big-circle-animation {
+  animation-name: circle-big;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes circle-big {
+  0%, 100%{
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

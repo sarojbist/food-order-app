@@ -1,7 +1,20 @@
 import ResturantCard from "./ResturantCard";
 import restObj from "../utils/mockData";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 const Body = () => {
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.486463086305346&lng=78.3657343313098&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const json = await data.json();
+      console.log(json);
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    }
+  }
   // creating state variable 
   const [restObj_new, setRestObj_new] = useState(restObj);
   return (
