@@ -9,7 +9,7 @@ const ResturantCard = (props) => {
     <div className="resturant-card">
       <img src={RES_CARD_LOGO + cloudinaryImageId} />
       <h2 className="resturant-name">{name}</h2>
-      <div className="resturant-info">
+      <div className="text-base font-medium m-[4px] flex items-center gap-[5px]">
         <FaStar className="star-icon" />
         <span>{avgRating}</span>
         <span>●</span>
